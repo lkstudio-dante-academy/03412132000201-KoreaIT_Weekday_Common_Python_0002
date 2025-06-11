@@ -33,48 +33,12 @@ from Example.Example_07 import E01Example_07
 from Example.Example_08 import E01Example_08
 from Example.Example_09 import E01Example_09
 from Example.Example_10 import E01Example_10
-from Example.Example_11 import E01Example_11
-from Example.Example_12 import E01Example_12
-from Example.Example_13 import E01Example_13
-from Example.Example_14 import E01Example_14
-from Example.Example_15 import E01Example_15
-from Example.Example_16 import E01Example_16
-from Example.Example_17 import E01Example_17
-from Example.Example_18 import E01Example_18
-from Example.Example_19 import E01Example_19
-from Example.Example_20 import E01Example_20
-from Example.Example_21 import E01Example_21
-from Example.Example_22 import E01Example_22
-from Example.Example_23 import E01Example_23
-from Example.Example_24 import E01Example_24
-from Example.Example_25 import E01Example_25
 
 from Practice.Practice_01 import P01Practice_01
 from Practice.Practice_02 import P01Practice_02
-from Practice.Practice_03 import P01Practice_03
-from Practice.Practice_04 import P01Practice_04
-from Practice.Practice_05 import P01Practice_05
-from Practice.Practice_06 import P01Practice_06
-from Practice.Practice_07 import P01Practice_07
-from Practice.Practice_08 import P01Practice_08
 
 from Training.Training_01 import T01Training_01
 from Training.Training_02 import T01Training_02
-from Training.Training_03 import T01Training_03
-from Training.Training_04 import T01Training_04
-from Training.Training_05 import T01Training_05
-from Training.Training_06 import T01Training_06
-from Training.Training_07 import T01Training_07
-from Training.Training_08 import T01Training_08
-from Training.Training_09 import T01Training_09
-from Training.Training_10 import T01Training_10
-from Training.Training_11 import T01Training_11
-from Training.Training_12 import T01Training_12
-from Training.Training_13 import T01Training_13
-from Training.Training_14 import T01Training_14
-from Training.Training_15 import T01Training_15
-from Training.Training_16 import T01Training_16
-from Training.Training_17 import T01Training_17
 
 """
 메인 (Main) 모듈이란?
@@ -96,7 +60,7 @@ Python 은 다른 프로그래밍 언어와 달리 단일 행 주석만을 제�
 """
 # 메인 모듈 일 경우
 if __name__ == "__main__":
-	# E01Example_01.start(sys.argv)
+	E01Example_01.start(sys.argv)
 	# E01Example_02.start(sys.argv)
 	# E01Example_03.start(sys.argv)
 	# E01Example_04.start(sys.argv)
@@ -106,46 +70,10 @@ if __name__ == "__main__":
 	# E01Example_08.start(sys.argv)
 	# E01Example_09.start(sys.argv)
 	# E01Example_10.start(sys.argv)
-	# E01Example_11.start(sys.argv)
-	# E01Example_12.start(sys.argv)
-	# E01Example_13.start(sys.argv)
-	# E01Example_14.start(sys.argv)
-	# E01Example_15.start(sys.argv)
-	# E01Example_16.start(sys.argv)
-	# E01Example_17.start(sys.argv)
-	# E01Example_18.start(sys.argv)
-	# E01Example_19.start(sys.argv)
-	# E01Example_20.start(sys.argv)
-	# E01Example_21.start(sys.argv)
-	E01Example_22.start(sys.argv)
-	# E01Example_23.start(sys.argv)
-	# E01Example_24.start(sys.argv)
-	# E01Example_25.start(sys.argv)
 	
 	# P01Practice_01.start(sys.argv)
 	# P01Practice_02.start(sys.argv)
-	# P01Practice_03.start(sys.argv)
-	# P01Practice_04.start(sys.argv)
-	# P01Practice_05.start(sys.argv)
-	# P01Practice_06.start(sys.argv)
-	# P01Practice_07.start(sys.argv)
-	# P01Practice_08.start(sys.argv)
 	
 	# T01Training_01.start(sys.argv)
 	# T01Training_02.start(sys.argv)
-	# T01Training_03.start(sys.argv)
-	# T01Training_04.start(sys.argv)
-	# T01Training_05.start(sys.argv)
-	# T01Training_06.start(sys.argv)
-	# T01Training_07.start(sys.argv)
-	# T01Training_08.start(sys.argv)
-	# T01Training_09.start(sys.argv)
-	# T01Training_10.start(sys.argv)
-	# T01Training_11.start(sys.argv)
-	# T01Training_12.start(sys.argv)
-	# T01Training_13.start(sys.argv)
-	# T01Training_14.start(sys.argv)
-	# T01Training_15.start(sys.argv)
-	# T01Training_16.start(sys.argv)
-	# T01Training_17.start(sys.argv)
 	
