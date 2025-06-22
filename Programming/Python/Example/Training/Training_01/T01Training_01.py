@@ -10,4 +10,8 @@ Python 연습 문제 1
 
 # Training 1
 def start(args):
-	pass
+	print("ABC")
+	print("{0}".format("ABC"))
+	print("{0}{1}{2}".format("A", "B", "C"))
+	print("{0:X}{1:X}{2:X}".format(10, 11, 12))
+	

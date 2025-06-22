@@ -1,7 +1,7 @@
 """
 import 키워드란?
-- 특정 모듈을 가져오는 역할을 수행하는 키워드를 의미한다. (+ 즉, import 키워드를 활용하면 Python 이 지원하는
-다양한 모듈을 가져와서 활용하는 것이 가능하다.)
+- 특정 모듈을 가져오는 역할을 수행하는 키워드를 의미한다. (+ 즉, import 키워드를 활용하면
+Python 이 지원하는 다양한 모듈을 가져와서 활용하는 것이 가능하다.)
 
 Python 은 다양한 모듈을 지원하며 이러한 모듈을 활용하면 프로그램을 좀 더 수월하게 제작하는 것이 가능하다.
 (+ 즉, 이미 완성 된 기능을 재활용함으로서 작성해야되는 명령문을 줄이는 것이 가능하다.)
@@ -80,6 +80,7 @@ if __name__ == "__main__":
 	# P01Practice_01.start(sys.argv)
 	# P01Practice_02.start(sys.argv)
 	# P01Practice_03.start(sys.argv)
+	# P01Practice_04.start(sys.argv)
 	
 	# T01Training_01.start(sys.argv)
 	# T01Training_02.start(sys.argv)

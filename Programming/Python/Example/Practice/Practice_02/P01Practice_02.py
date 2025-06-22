@@ -19,4 +19,12 @@ Ex)
 
 # Practice 2
 def start(args):
-	pass
+	nVal = int(input("정수 입력 : "))
+	nPos = int(input("위치 입력 : "))
+	
+	nVal_Replace = nVal ^ (1 << nPos)
+	
+	print("=====> 결과 <=====")
+	print(f"변경 전 : {nVal:#b}")
+	print(f"변경 후 : {nVal_Replace:#b}")
+	

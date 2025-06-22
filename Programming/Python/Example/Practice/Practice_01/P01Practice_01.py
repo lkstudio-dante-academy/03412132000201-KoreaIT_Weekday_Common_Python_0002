@@ -17,4 +17,15 @@ Ex)
 
 # Practice 1
 def start(args):
-	pass
+	oTokens = input("정수 (2 개) 입력 : ").split()
+	
+	nValA = int(oTokens[0])
+	nValB = int(oTokens[1])
+	
+	bIsTrueA = nValA != 0
+	bIsTrueB = nValB != 0
+	
+	print("=====> 결과 <=====")
+	print(f"{nValA} and {nValB} = {bool(bIsTrueA * bIsTrueB)}")
+	print(f"{nValA} or {nValB} = {bool(bIsTrueA + bIsTrueB)}")
+	
