@@ -32,7 +32,7 @@ while 반복문 vs for 반복문
 """
 
 
-# Example 6 (반복문)
+# Example 6 (반복문 - 1)
 def start(args):
 	nTimes = int(input("횟수 입력 : "))
 	

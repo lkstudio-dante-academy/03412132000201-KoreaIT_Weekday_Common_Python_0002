@@ -26,17 +26,61 @@ else:
 
 Python 은 다른 프로그래밍 언어와 달리 if ~ else 조건문만 지원하며 switch ~ case 조건문은 지원하지 않는다.
 (+ 즉, 동등 비교 조건이 중복 될 경우 명령문 작성에 불편함이 있다는 것을 의미한다.)
+
+if vs elif
+- if 는 새로운 조건문이 시작 되었다는 것을 의미하며 elif 기존 조건문에 새로운 조건이 추가 되었다는 것을 의미한다.
+
+Ex)
+if 조건 A:
+	# Do Something
+	
+if 조건 B:
+	# Do Something
+	
+위와 같이 조건 A 와 조건 B 는 서로 다른 if 조건문에 작성 되었기 때문에 별개의 조건이라는 것을 알 수 있다. (+ 즉,
+조건 A 와 조건 B 에 해당하는 명령문이 모두 실행 될 수 있다는 것을 의미한다.)
+
+Ex)
+if 조건 A:
+	# Do Something
+	
+elif 조건 B:
+	# Do Something
+
+위의 경우 조건 B 는 elif 조건문에 작성 되었기 때문에 조건 A 와 조건 B 는 같은 조건문이라는 것을 알 수 있다.
+
+따라서 조건 A 를 만족 할 경우 조건 B 에 해당하는 명령문은 실행되지 않는다는 것을 알 수 있다. (+ 즉,
+조건 A 를 만족했을 경우 조건 B 는 검사하지 않는다는 것을 의미한다.)
 """
 
 
 # Example 5 (조건문)
 def start(args):
 	nScore = int(input("점수 입력 : "))
+	print("=====> 조건문 - 1 <=====")
 	
 	"""
 	아래와 같이 if ~ else 조건문은 필요에 따라 중첩하는 것이 가능하다. (+ 즉, if ~ else 조건문 내부에
-	다시 if ~ else 조건문을 작성하는 것이 가능하다.)
+	if ~ else 조건문을 작성하는 것이 가능하다.)
 	"""
+	if nScore < 60:
+		print("F 학점입니다.")
+	
+	else:
+		if nScore >= 90:
+			print("A 학점입니다.")
+		
+		if nScore >= 80:
+			print("B 학점입니다.")
+		
+		if nScore >= 70:
+			print("C 학점입니다.")
+		
+		else:
+			print("D 학접입니다.")
+			
+	print("\n=====> 조건문 - 2 <=====")
+	
 	if nScore < 60:
 		print("F 학점입니다.")
 	
@@ -52,3 +96,4 @@ def start(args):
 		
 		else:
 			print("D 학접입니다.")
+			
