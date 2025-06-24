@@ -19,4 +19,34 @@ Ex)
 
 # Training 2
 def start(args):
-	pass
+	nScore = int(input("점수 입력 : "))
+	
+	oGrade = ""
+	oGrade_Detail = ""
+	
+	if nScore < 60:
+		oGrade = "F"
+	
+	else:
+		if nScore >= 90:
+			oGrade = "A"
+		
+		elif nScore >= 80:
+			oGrade = "B"
+		
+		elif nScore >= 70:
+			oGrade = "C"
+		
+		else:
+			oGrade = "D"
+		
+		nScore_Detail = nScore % 10
+		
+		# + 일 경우
+		if nScore >= 100 or nScore_Detail >= 7:
+			oGrade_Detail = "+"
+		
+		else:
+			oGrade_Detail = "-" if nScore_Detail <= 3 else "0"
+	
+	print(f"{oGrade}{oGrade_Detail} 학점입니다.")
