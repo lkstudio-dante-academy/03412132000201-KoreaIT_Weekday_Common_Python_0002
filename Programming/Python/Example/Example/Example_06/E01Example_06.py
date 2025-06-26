@@ -101,4 +101,3 @@ def start(args):
 	
 	for i in range(0, nTimes):
 		print(f"{i + 1} 번째 반복 중 입니다.")
-		i += 1

@@ -24,7 +24,7 @@ def start(args):
 	
 	nVal_Replace = nVal ^ (1 << nPos)
 	
-	print("=====> 결과 <=====")
+	print("\n=====> 결과 <=====")
 	print(f"변경 전 : {nVal:#b}")
 	print(f"변경 후 : {nVal_Replace:#b}")
 	

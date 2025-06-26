@@ -57,7 +57,7 @@ elif 조건 B:
 # Example 5 (조건문)
 def start(args):
 	nScore = int(input("점수 입력 : "))
-	print("=====> 조건문 - 1 <=====")
+	print("\n=====> 조건문 - 1 <=====")
 	
 	"""
 	아래와 같이 if ~ else 조건문은 필요에 따라 중첩하는 것이 가능하다. (+ 즉, if ~ else 조건문 내부에
