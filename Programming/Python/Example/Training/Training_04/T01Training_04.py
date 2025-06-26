@@ -21,4 +21,17 @@ Ex)
 
 # Training 4
 def start(args):
-	pass
+	nVal = int(input("정수 (2 ~ 9) 입력 : "))
+	
+	# 올바른 수를 입력했을 경우
+	if 2 <= nVal <= 9:
+		i = 1
+		
+		while i <= 9:
+			nResult = nVal * i
+			print(f"{nVal} * {i} = {nResult}")
+			
+			i += 1
+	
+	else:
+		print("2 ~ 9 사이의 수를 입력해주세요.")

@@ -27,4 +27,21 @@ Ex)
 
 # Training 5
 def start(args):
-	pass
+	nAnswer = random.randrange(1, 100)
+	print(f"정답 : {nAnswer}\n")
+	
+	bIsContinue = True
+	
+	while bIsContinue:
+		nVal = int(input("정수 입력 : "))
+		
+		# 정답 일 경우
+		if nVal == nAnswer:
+			bIsContinue = False
+		
+		else:
+			oMsg = "큽니다." if nVal < nAnswer else "작습니다."
+			print(f"정답은 {nVal} 보다 {oMsg}\n")
+			
+	print("프로그램을 종료합니다.")
+	
