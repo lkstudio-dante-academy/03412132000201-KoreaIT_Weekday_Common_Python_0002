@@ -4,96 +4,78 @@ import sys
 import random
 
 """
-람다 (Lambda) 란?
-- 이름이 존재하지 않는 함수를 구현하는 기능을 의미한다. (+ 즉, 람다는 이름이 존재하지 않기 때문에
-일반적인 함수와 달리 재사용을 위해서 구현 되는 함수가 아니라는 것을 알 수 있다.)
+재귀 호출 (Recursive Call) 이란?
+- 함수가 자기 자신을 다시 호출 할 수 있는 기능을 의미한다, (+ 즉, 함수는 필요에 따라 자기 자신을
+다시 호출함으로서 복잡한 문제를 쉽게 풀어내는 것이 가능하다.)
 
-람다는 일회성 함수를 구현하는데 주로 활용되며 람다 내부에는 한 라인에 해당하는 명령문만 작성 할 수 있다. (+ 즉,
-람다 내부에는 복잡한 명령문을 작성하는 것이 불가능하다.)
-
-람다는 주로 다른 함수 내부에 구현되기 때문에 내장 함수라고도 불리며 람다를 감싸고 있는 외부 함수에 존재하는
-지역 변수에 접근하는 것이 가능하다. (+ 즉, 람다는 외부 함수 내부에 존재하기 때문에 외부 함수의 일부로
-인식 된 다는 것을 알 수 있다.)
-
-Python 람다 구현 방법
-- lambda + 매개 변수 + 람다 몸체
+단, 재귀 호출은 반드시 호출을 멈추기 위한 명령문을 작성해줘야한다. (+ 즉, 재귀 호출을 멈추기 위한 명령문을
+작성하지 않을 경우 특정 함수가 자기 자신을 무한히 호출하는 무한 루프에 빠진다는 것을 알 수 있다.)
 
 Ex)
-oLambda = lambda a_nVal: print(a_nVal)
-oLambda(10)
+def someMethod():
+	someMethod()
+	
+someMethod()
 
-위와 같이 lambda 키워드를 활용하면 람다를 구현하는 것이 가능하며 구현 된 람다는 변수에 할당 후 호출하는 것이
-가능하다. (+ 즉, oLambda 변수에는 람다를 참조하는 참조 값이 할당 된 다는 것을 알 수 있다.)
+위와 같이 함수는 자기 자신을 다시 호출하는 것이 가능하지만 재귀 호출을 끝내기 위한 명령문이 없을 경우
+무한 루프에 빠진다는 것을 알 수 있다.
 """
 
 
-# Example 12 (함수 - 3)
+# Example 13 (함수 - 3)
 def start(args):
+	nVal = int(input("정수 입력 : "))
+	nFactorial = getFactorial(nVal)
+	
+	print(f"{nVal}! : {nFactorial}")
 	oListValues = []
 	
 	for i in range(0, 10):
 		nVal = random.randrange(1, 100)
 		oListValues.append(nVal)
 	
-	print("=====> 리스트 <=====")
-	printValues(oListValues)
+	print("\n=====> 리스트 <=====")
 	
-	"""
-	아래와 같이 함수는 다른 함수의 입력으로 전달하는 것이 가능하다. (+ 즉, 함수를 데이터처럼 취급하는 것이
-	가능하다.)
-	"""
-	sortValues(oListValues, compareVal)
+	for nVal in oListValues:
+		print(f"{nVal}, ", end = "")
 	
-	print("\n=====> 리스트 - 오름 차순 정렬 후 <=====")
-	printValues(oListValues)
+	nVal_Sum = getVal_Sum(oListValues, 0)
+	print(f"\n\n합계 : {nVal_Sum}")
 	
-	sortValues(oListValues, lambda a_nLhs, a_nRhs: a_nRhs - a_nLhs)
+	print("\n=====> 피보나치 수열 <=====")
 	
-	print("\n=====> 리스트 - 내림 차순 정렬 후 <=====")
-	printValues(oListValues)
-	
-	oLambdaA = getLambda(10)
-	oLambdaB = getLambda(20)
-	
-	print("\n=====> 람다 호출 <=====")
-	oLambdaA()
-	oLambdaB()
-
-
-# 람다를 반환한다
-def getLambda(a_nVal):
-	"""
-	람다 내부에서는 람다를 감싸고 있는 외부 지역에 존재하는 변수에 자유롭게 접근하는 것이 가능하다. (+ 즉,
-	외부 지역에 선언 된 변수의 생명 주기와 상관 없이 접근이 가능하다는 것을 알 수 있다.)
-	
-	이는 람다 내부에 외부 지역에 선언 된 변수와 동일한 사본 변수가 존재하기 때문이다. (+ 즉, 외부 지역에
-	선언 된 변수와 동일한 이름과 데이터를 지니고 있는 변수가 람다 내부에 선언 된다는 것을 알 수 있다.)
-	"""
-	return lambda: print(f"정수 : {a_nVal}")
-
-
-# 값을 비교한다
-def compareVal(a_nLhs, a_nRhs):
-	return a_nLhs - a_nRhs
-
-
-# 값을 정렬한다
-def sortValues(a_oListValues, a_oCompare):
-	for i in range(0, len(a_oListValues)):
-		for j in range(0, len(a_oListValues) - (i + 1)):
-			nLhs = a_oListValues[j]
-			nRhs = a_oListValues[j + 1]
-			
-			# 정렬이 필요 없을 경우
-			if a_oCompare(nLhs, nRhs) <= 0:
-				continue
-			
-			a_oListValues[j], a_oListValues[j + 1] = nRhs, nLhs
-
-
-# 값을 출력한다
-def printValues(a_oListValues):
-	for nVal in a_oListValues:
+	for i in range(0, 10):
+		nVal = getNumber_Fibonacci(i)
 		print(f"{nVal}, ", end = "")
 	
 	print()
+
+
+# 팩토리얼을 반환한다
+def getFactorial(a_nVal):
+	"""
+	아래와 같이 재귀 호출을 종료 시키기 위한 명령문을 반드시 작성해줘야한다.
+	"""
+	# 0 이하 일 경우
+	if a_nVal <= 0:
+		return 1
+	
+	return a_nVal * getFactorial(a_nVal - 1)
+
+
+# 합계를 반환한다
+def getVal_Sum(a_oListValues, a_nIdx):
+	# 범위를 벗어났을 경우
+	if a_nIdx >= len(a_oListValues):
+		return 0
+	
+	return a_oListValues[a_nIdx] + getVal_Sum(a_oListValues, a_nIdx + 1)
+
+
+# 피보나치 수를 반환한다
+def getNumber_Fibonacci(a_nVal):
+	# 1 이하 일 경우
+	if a_nVal <= 1:
+		return 0 if a_nVal <= 0 else 1
+	
+	return getNumber_Fibonacci(a_nVal - 1) + getNumber_Fibonacci(a_nVal - 2)

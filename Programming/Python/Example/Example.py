@@ -36,6 +36,7 @@ from Example.Example_10 import E01Example_10
 from Example.Example_11 import E01Example_11
 from Example.Example_12 import E01Example_12
 from Example.Example_13 import E01Example_13
+from Example.Example_14 import E01Example_14
 
 from Practice.Practice_01 import P01Practice_01
 from Practice.Practice_02 import P01Practice_02
@@ -89,6 +90,7 @@ if __name__ == "__main__":
 	# E01Example_11.start(sys.argv)
 	# E01Example_12.start(sys.argv)
 	# E01Example_13.start(sys.argv)
+	# E01Example_14.start(sys.argv)
 	
 	# P01Practice_01.start(sys.argv)
 	# P01Practice_02.start(sys.argv)
