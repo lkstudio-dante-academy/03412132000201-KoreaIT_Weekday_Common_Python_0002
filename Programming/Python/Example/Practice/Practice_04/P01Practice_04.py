@@ -20,4 +20,39 @@ Ex)
 
 # Practice 4
 def start(args):
-	pass
+	PRICE_STUFF_A = 50
+	PRICE_STUFF_B = 250
+	PRICE_STUFF_C = 500
+	
+	nAmount = int(input("소지 금액 : "))
+	
+	print("\n=====> 구입 가능 조합 <=====")
+	i = 0
+	
+	while i <= nAmount:
+		j = 0
+		
+		while j <= nAmount:
+			k = 0
+			
+			while k <= nAmount:
+				nPrice = i + j + k
+				
+				# 금액을 모두 소비했을 경우
+				if nPrice == nAmount:
+					nNumStuffsA = i // PRICE_STUFF_A
+					nNumStuffsB = j // PRICE_STUFF_B
+					nNumStuffsC = k // PRICE_STUFF_C
+					
+					oMsgA = f"물건 A x {nNumStuffsA} 개"
+					oMsgB = f"물건 B x {nNumStuffsB} 개"
+					oMsgC = f"물건 C x {nNumStuffsC} 개"
+					
+					print(f"{oMsgA}, {oMsgB}, {oMsgC}")
+					
+				k += PRICE_STUFF_C
+				
+			j += PRICE_STUFF_B
+			
+		i += PRICE_STUFF_A
+		

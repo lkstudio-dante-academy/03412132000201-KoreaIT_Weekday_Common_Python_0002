@@ -42,4 +42,60 @@ Ex)
 
 # Practice 6
 def start(args):
-	pass
+	nNumLines = int(input("라인 수 입력 : "))
+	
+	for i in range(0, nNumLines):
+		for j in range(0, nNumLines):
+			bIsStarA = i == j
+			bIsStarB = j == (nNumLines - 1) - i
+			
+			print("{0}".format("*" if bIsStarA or bIsStarB else " "), end = "")
+			
+		print()
+		
+	print()
+	
+	for i in range(0, nNumLines):
+		for j in range(0, nNumLines):
+			bIsStarA = i == 0
+			bIsStarB = i == nNumLines - 1
+			bIsStarC = j == (nNumLines - 1) - i
+			
+			print("{0}".format("*" if bIsStarA or bIsStarB or bIsStarC else " "), end = "")
+	
+		print()
+	
+	print()
+	
+	for i in range(0, nNumLines):
+		for j in range(0, nNumLines):
+			bIsStarA = j == 0
+			bIsStarB = j == nNumLines - 1
+			bIsStarC = i == j
+			
+			print("{0}".format("*" if bIsStarA or bIsStarB or bIsStarC else " "), end = "")
+		
+		print()
+	
+	print()
+	nWidth_Max = (nNumLines * 2) - 1
+	
+	for i in range(0, nNumLines):
+		nCenter = nWidth_Max // 2
+		
+		for j in range(0, nWidth_Max):
+			bIsStar = j >= nCenter - i and j <= nCenter + i
+			print("{0}".format("*" if bIsStar else " "), end = "")
+		
+		print()
+	
+	print()
+	
+	for i in range(0, nNumLines)[::-1]:
+		nCenter = nWidth_Max // 2
+		
+		for j in range(0, nWidth_Max):
+			bIsStar = j >= nCenter - i and j <= nCenter + i
+			print("{0}".format("*" if bIsStar else " "), end = "")
+		
+		print()
