@@ -27,4 +27,3 @@ def start(args):
 	print("\n=====> 결과 <=====")
 	print(f"변경 전 : {nVal:#b}")
 	print(f"변경 후 : {nVal_Replace:#b}")
-	

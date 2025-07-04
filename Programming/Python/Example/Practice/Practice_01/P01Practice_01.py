@@ -28,4 +28,3 @@ def start(args):
 	print("=====> 결과 <=====")
 	print(f"{nValA} and {nValB} = {bool(bIsTrueA * bIsTrueB)}")
 	print(f"{nValA} or {nValB} = {bool(bIsTrueA + bIsTrueB)}")
-	

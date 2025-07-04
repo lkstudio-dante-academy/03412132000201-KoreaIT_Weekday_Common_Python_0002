@@ -50,9 +50,9 @@ def start(args):
 			bIsStarB = j == (nNumLines - 1) - i
 			
 			print("{0}".format("*" if bIsStarA or bIsStarB else " "), end = "")
-			
-		print()
 		
+		print()
+	
 	print()
 	
 	for i in range(0, nNumLines):
@@ -62,7 +62,7 @@ def start(args):
 			bIsStarC = j == (nNumLines - 1) - i
 			
 			print("{0}".format("*" if bIsStarA or bIsStarB or bIsStarC else " "), end = "")
-	
+		
 		print()
 	
 	print()

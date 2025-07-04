@@ -40,13 +40,12 @@ def start(args):
 	# 값 보정이 필요 할 경우
 	if nValA > nValB:
 		nValA, nValB = nValB, nValA
-		
+	
 	for i in range(nValA, nValB + 1):
 		print(f"=====> {i} 단 <=====")
 		
 		for j in range(1, 10):
 			nVal = i * j
 			print(f"{i} * {j} = {nVal}")
-			
-		print()
 		
+		print()

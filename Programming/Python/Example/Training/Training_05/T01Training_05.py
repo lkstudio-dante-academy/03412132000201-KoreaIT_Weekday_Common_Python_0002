@@ -42,6 +42,5 @@ def start(args):
 		else:
 			oMsg = "큽니다." if nVal < nAnswer else "작습니다."
 			print(f"정답은 {nVal} 보다 {oMsg}\n")
-			
-	print("프로그램을 종료합니다.")
 	
+	print("프로그램을 종료합니다.")

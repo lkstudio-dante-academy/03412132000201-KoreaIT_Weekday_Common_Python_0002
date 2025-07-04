@@ -42,9 +42,9 @@ def start(args):
 		for j in range(0, nNumLines):
 			bIsStar = j <= i
 			print("{0}".format("*" if bIsStar else " "), end = "")
-			
-		print()
 		
+		print()
+	
 	print()
 	
 	"""
@@ -69,24 +69,23 @@ def start(args):
 		for j in range(0, nNumLines):
 			bIsStar = j <= i
 			print("{0}".format("*" if bIsStar else " "), end = "")
-			
-		print()
 		
+		print()
+	
 	print()
 	
 	for i in range(0, nNumLines):
 		for j in range(0, nNumLines)[::-1]:
 			bIsStar = j <= i
 			print("{0}".format("*" if bIsStar else " "), end = "")
-			
-		print()
 		
+		print()
+	
 	print()
 	
 	for i in range(0, nNumLines)[::-1]:
 		for j in range(0, nNumLines)[::-1]:
 			bIsStar = j <= i
 			print("{0}".format("*" if bIsStar else " "), end = "")
-			
-		print()
 		
+		print()

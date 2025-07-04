@@ -24,7 +24,7 @@ def start(args):
 	# 범위에 포함 될 경우
 	if nVal >= nVal_Min and nVal <= nVal_Max:
 		print(f"{nVal} 은(는) {nVal_Min} ~ {nVal_Max} 사이에 존재합니다.")
-		
+	
 	else:
 		print(f"{nVal} 은(는) {nVal_Min} ~ {nVal_Max} 사이에 존재하지않습니다.")
 	
@@ -51,4 +51,3 @@ def start(args):
 	
 	else:
 		print(f"{nVal} 은(는) {nVal_Min} ~ {nVal_Max} 사이에 존재하지않습니다.")
-		

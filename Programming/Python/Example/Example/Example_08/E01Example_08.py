@@ -69,8 +69,8 @@ def start(args):
 		Ex)
 		nVal = random.randrange(1, 100)
 		
-		위와 같이 random 모듈에 존재하는 randrange 함수를 호출하면 범위 내에 존재하는 수를 무작위로
-		추출하는 것이 가능하다.
+		위와 같이 random 모듈에 존재하는 randrange 함수를 호출하면 범위 내에 존재하는 수를
+		무작위로 추출하는 것이 가능하다.
 		"""
 		nVal = random.randrange(1, 100)
 		
@@ -128,7 +128,8 @@ def start(args):
 		
 	위와 같이 in 키워드와 반복문을 활용하면 리스트에 존재하는 특정 데이터를 모두 제거하는 것이 가능하다.
 	"""
-	oListValues.remove(nVal_Remove)
+	while nVal_Remove in oListValues:
+		oListValues.remove(nVal_Remove)
 	
 	print("\n=====> 리스트 - 제거 후 <=====")
 	
@@ -144,7 +145,9 @@ def start(args):
 	단, del 키워드는 remove 함수와 마찬가지로 잘못 된 위치를 입력했을 경우 내부적으로 예외가 발생하기 때문에
 	주의가 필요하다.
 	"""
-	del oListValues[nIdx_Remove]
+	# 인덱스가 유효 할 경우
+	if nIdx_Remove >= 0 and nIdx_Remove < len(oListValues):
+		del oListValues[nIdx_Remove]
 	
 	print("\n=====> 리스트 - 제거 후 <=====")
 	

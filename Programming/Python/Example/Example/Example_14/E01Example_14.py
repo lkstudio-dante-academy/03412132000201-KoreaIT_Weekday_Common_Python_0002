@@ -55,7 +55,7 @@ def start(args):
 	
 	print("=====> 리스트 <=====")
 	printValues(oListValues)
-
+	
 	# 값을 비교한다
 	def compareVal(a_nLhs, a_nRhs):
 		return a_nLhs - a_nRhs

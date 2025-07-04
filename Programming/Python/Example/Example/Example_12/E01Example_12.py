@@ -52,7 +52,7 @@ def getVal_Sum(*args):
 	"""
 	for nVal in args:
 		nVal_Sum += nVal
-		
+	
 	return nVal_Sum
 
 
@@ -63,6 +63,5 @@ def printValues(**kwargs):
 	"""
 	for oKey, nVal in kwargs.items():
 		print(f"{oKey}: {nVal}, ", end = "")
-		
-	print()
 	
+	print()

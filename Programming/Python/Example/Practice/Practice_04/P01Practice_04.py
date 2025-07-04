@@ -49,10 +49,9 @@ def start(args):
 					oMsgC = f"물건 C x {nNumStuffsC} 개"
 					
 					print(f"{oMsgA}, {oMsgB}, {oMsgC}")
-					
-				k += PRICE_STUFF_C
 				
-			j += PRICE_STUFF_B
+				k += PRICE_STUFF_C
 			
-		i += PRICE_STUFF_A
+			j += PRICE_STUFF_B
 		
+		i += PRICE_STUFF_A

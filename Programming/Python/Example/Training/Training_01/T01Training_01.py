@@ -17,4 +17,3 @@ def start(args):
 	print(f"{"A"}{"B"}{"C"}")
 	print(f"{chr(65)}{chr(66)}{chr(67)}")
 	print(f"{10:X}{11:X}{12:X}")
-	

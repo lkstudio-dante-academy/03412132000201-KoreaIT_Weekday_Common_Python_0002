@@ -39,4 +39,3 @@ def start(args):
 	
 	print(f"\n합계 : {nVal_Sum}")
 	print(f"평균 : {nVal_Sum / nNumValues}")
-	
