@@ -115,7 +115,6 @@ def getResult_Calc(a_nValA, a_oOperator, a_nValB):
 
 g_nVal = 0
 
-
 # 값을 증가 시킨다
 def incrVal(a_nVal):
 	nVal = 0
