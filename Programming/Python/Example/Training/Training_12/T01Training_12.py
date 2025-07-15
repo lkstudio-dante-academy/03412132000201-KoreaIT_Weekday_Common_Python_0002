@@ -13,7 +13,7 @@ def start(args):
 	MENU_ADD_MEMBER = 1
 	MENU_REMOVE_MEMBER = 2
 	MENU_SEARCH_MEMBER = 3
-	MENU_SHOW_ALL_MEMBERS = 4
+	MENU_SHOW_MEMBERS_ALL = 4
 	MENU_EXIT = 5
 	
 	nMenu = 0
@@ -70,7 +70,7 @@ def start(args):
 				print(f"{oName} 은(는) 존재하지 않습니다.")
 		
 		# 모든 회원 출력 일 경우
-		elif nMenu == MENU_SHOW_ALL_MEMBERS:
+		elif nMenu == MENU_SHOW_MEMBERS_ALL:
 			print("=====> 모든 회원 정보 <=====")
 			
 			for oKey, oMember in oDictMembers.items():
