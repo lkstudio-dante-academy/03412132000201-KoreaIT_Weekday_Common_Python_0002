@@ -47,8 +47,8 @@ def start(args):
 	oTupleValues = (1, 2, 3, 4, 5)
 	
 	"""
-	아래와 같이 튜플은 생성 되고 나면 더이상 데이터를 변경하는 것이 불가능하다. (+ 즉, 튜플에 존재하는
-	데이터의 변경을 시도 할 경우 예외가 발생한다는 것을 알 수 있다.)
+	아래와 같이 튜플은 생성 되고 나면 더이상 데이터를 변경하는 것이 불가능하다. (+ 즉,
+	튜플에 존재하는 데이터의 변경을 시도 할 경우 예외가 발생한다는 것을 알 수 있다.)
 	"""
 	# oTupleValues[0] = 10
 	
@@ -69,7 +69,7 @@ def start(args):
 		Ex)
 		nVal = random.randrange(1, 100)
 		
-		위와 같이 random 모듈에 존재하는 randrange 함수를 호출하면 범위 내에 존재하는 수를
+		위와 같이 random 모듈에 존재하는 randrange 함수를 호출하면 범위 내에 존재하는 수를 
 		무작위로 추출하는 것이 가능하다.
 		"""
 		nVal = random.randrange(1, 100)
@@ -128,7 +128,8 @@ def start(args):
 		
 	위와 같이 in 키워드와 반복문을 활용하면 리스트에 존재하는 특정 데이터를 모두 제거하는 것이 가능하다.
 	"""
-	while nVal_Remove in oListValues:
+	# 값이 존재 할 경우
+	if nVal_Remove in oListValues:
 		oListValues.remove(nVal_Remove)
 	
 	print("\n=====> 리스트 - 제거 후 <=====")

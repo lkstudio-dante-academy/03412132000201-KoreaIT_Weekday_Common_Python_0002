@@ -11,10 +11,10 @@ Python 의 가변 길이 매개 변수는 위치 기반 매개 변수와 키워�
 변환한다는 것을 알 수 있다.)
 
 Ex)
-void someFuncA(*args):				<- 위치 기반 매개 변수
+def someFuncA(*args):				<- 위치 기반 매개 변수
 	# Do Something
 	
-void someFuncB(**kwargs):			<- 키워드 기반 매개 변수
+def someFuncB(**kwargs):			<- 키워드 기반 매개 변수
 	# Do Something
 
 someFuncA(10)								<- (10) 전달
@@ -52,7 +52,7 @@ def getVal_Sum(*args):
 	"""
 	for nVal in args:
 		nVal_Sum += nVal
-	
+		
 	return nVal_Sum
 
 
@@ -63,5 +63,6 @@ def printValues(**kwargs):
 	"""
 	for oKey, nVal in kwargs.items():
 		print(f"{oKey}: {nVal}, ", end = "")
-	
+		
 	print()
+	

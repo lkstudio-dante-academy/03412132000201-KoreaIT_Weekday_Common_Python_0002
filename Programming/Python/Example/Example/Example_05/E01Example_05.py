@@ -78,7 +78,7 @@ def start(args):
 		
 		else:
 			print("D 학접입니다.")
-	
+			
 	print("\n=====> 조건문 - 2 <=====")
 	
 	if nScore < 60:
@@ -96,3 +96,4 @@ def start(args):
 		
 		else:
 			print("D 학접입니다.")
+			
