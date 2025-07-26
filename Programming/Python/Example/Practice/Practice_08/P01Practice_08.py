@@ -1,6 +1,8 @@
 import os
 import sys
 
+import random
+
 """
 Python 과제 8
 - 야구 게임 제작하기
@@ -25,4 +27,44 @@ Ex)
 
 # Practice 8
 def start(args):
-	pass
+	oAnswer = []
+	setupAnswer(oAnswer)
+	
+	print(f"정답 : {oAnswer}\n")
+	
+	while True:
+		oTokens = input("정답 (4 개) 입력 : ").split()
+		oListValues = list(map(int, oTokens))
+		
+		nCount_Strike = 0
+		nCount_Ball = 0
+		
+		for i in range(0, len(oAnswer)):
+			for j in range(0, len(oListValues)):
+				# 값이 다를 경우
+				if oAnswer[i] != oListValues[j]:
+					continue
+				
+				nCount_Strike += 1 if i == j else 0
+				nCount_Ball += 1 if i != j else 0
+		
+		print(f"결과 : {nCount_Strike} Strike, {nCount_Ball} Ball\n")
+		
+		# 4 스트라이크 일 경우
+		if nCount_Strike >= 4:
+			break
+	
+	print("프로그램을 종료합니다.")
+
+
+# 정답을 설정한다
+def setupAnswer(a_oAnswer):
+	oSetValues = set()
+	
+	while len(oSetValues) < 4:
+		nVal = random.randrange(1, 10)
+		oSetValues.add(nVal)
+	
+	for nVal in oSetValues:
+		a_oAnswer.append(nVal)
+		

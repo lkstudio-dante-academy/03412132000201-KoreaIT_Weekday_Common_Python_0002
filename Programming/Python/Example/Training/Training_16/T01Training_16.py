@@ -6,7 +6,7 @@ from Training.Training_16.CManager_Member import CManager_Member
 """
 Python 연습 문제 16
 - 회원 관리 프로그램 제작하기 (+ 클래스 활용)
-- 요구 사항은 연습 문제 11 번 참고
+- 세부 사항은 연습 문제 11 번 참고
 """
 
 
@@ -21,9 +21,13 @@ def start(args):
 	nMenu = 0
 	oManager = CManager_Member()
 	
-	while nMenu != MENU_EXIT:
+	while True:
 		printMenu()
 		nMenu = int(input("\n선택 : "))
+		
+		# 종료 일 경우
+		if nMenu == MENU_EXIT:
+			break
 		
 		# 회원 추가 일 경우
 		if nMenu == MENU_ADD_MEMBER:

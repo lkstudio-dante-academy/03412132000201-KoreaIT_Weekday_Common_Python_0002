@@ -4,7 +4,7 @@ import sys
 """
 Python 연습 문제 12
 - 회원 관리 프로그램 제작하기 (+ 비선형 컬렉션 활용)
-- 세부적인 조건은 연습 문제 11 참고
+- 세부 사항은 연습 문제 11 참고
 """
 
 
@@ -19,7 +19,7 @@ def start(args):
 	nMenu = 0
 	oDictMembers = dict()
 	
-	while nMenu != MENU_EXIT:
+	while True:
 		print("=====> 메뉴 <=====")
 		print("1. 회원 추가")
 		print("2. 회원 제거")
@@ -28,6 +28,10 @@ def start(args):
 		print("5. 종료")
 		
 		nMenu = int(input("\n선택 : "))
+		
+		# 종료 일 경우
+		if nMenu == MENU_EXIT:
+			break
 		
 		# 회원 추가 일 경우
 		if nMenu == MENU_ADD_MEMBER:

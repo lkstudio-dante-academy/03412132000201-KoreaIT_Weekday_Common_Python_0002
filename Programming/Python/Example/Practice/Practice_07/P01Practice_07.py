@@ -18,4 +18,22 @@ Ex)
 
 # Practice 7
 def start(args):
-	pass
+	oListStrings = [
+		"*****     * ***** ***** *   * ***** *     ***** ***** ***** ",
+		"*   *     *     *     * *   * *     *         * *   * *   * ",
+		"*   *     * ***** ***** ***** ***** *****     * ***** ***** ",
+		"*   *     * *         *     *     * *   *     * *   *     * ",
+		"*****     * ***** *****     * ***** *****     * *****     * "
+	]
+	
+	oStr_Val = input("정수 입력 : ")
+	
+	for i in range(0, len(oListStrings)):
+		for j in range(0, len(oStr_Val)):
+			nVal = int(oStr_Val[j])
+			
+			for k in range(0, 6):
+				nIdx = (nVal * 5) + nVal + k
+				print(f"{oListStrings[i][nIdx]}", end = "")
+				
+		print()
