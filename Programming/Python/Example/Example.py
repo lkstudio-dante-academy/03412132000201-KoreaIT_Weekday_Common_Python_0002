@@ -125,7 +125,7 @@ if __name__ == "__main__":
 	# E01Example_18.start(sys.argv)
 	# E01Example_19.start(sys.argv)
 	# E01Example_20.start(sys.argv)
-	E01Example_21.start(sys.argv)
+	# E01Example_21.start(sys.argv)
 	# E01Example_22.start(sys.argv)
 	# E01Example_23.start(sys.argv)
 	# E01Example_24.start(sys.argv)
@@ -162,5 +162,5 @@ if __name__ == "__main__":
 	# T01Training_17.start(sys.argv)
 	# T01Training_18.start(sys.argv)
 	# T01Training_19.start(sys.argv)
-	# T01Training_20.start(sys.argv)
+	T01Training_20.start(sys.argv)
 	
