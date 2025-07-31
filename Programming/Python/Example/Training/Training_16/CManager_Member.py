@@ -1,6 +1,7 @@
 import os
 import sys
 
+import pickle
 from Training.Training_16.CMember import CMember
 
 
@@ -26,6 +27,10 @@ class CManager_Member:
 		nResult = self.findMember(a_oName)
 		del self.m_oListMembers[nResult]
 		
+	# 회원을 검색한다
+	def searchMember(self, a_oName):
+		self.showMember(a_oName)
+		
 	# 회원 정보를 출력한다
 	def showMember(self, a_oName):
 		nResult = self.findMember(a_oName)
@@ -46,3 +51,56 @@ class CManager_Member:
 		
 		return -1
 	
+	# 회원을 로드한다
+	def loadMembers_FromFile(self, a_oPath_File):
+		# 로드가 불가능 할 경우
+		if not os.path.exists(a_oPath_File):
+			return
+		
+		with open(a_oPath_File, "rt", encoding = "utf-8") as oRStream:
+			oListInfos_Member = oRStream.readlines()
+			
+			for oInfo_Member in oListInfos_Member:
+				oTokens = oInfo_Member.split(",")
+				oMember = CMember(oTokens[0], oTokens[1])
+				
+				self.m_oListMembers.append(oMember)
+	
+	# 회원을 저장한다
+	def saveMembers_ToFile(self, a_oPath_File):
+		oPath_Dir = os.path.dirname(a_oPath_File)
+		
+		# 디렉토리 생성이 필요 할 경우
+		if oPath_Dir:
+			os.makedirs(oPath_Dir, exist_ok = True)
+			
+		with open(a_oPath_File, "wt", encoding = "utf-8") as oWStream:
+			for oMember in self.m_oListMembers:
+				oName = oMember.m_oName
+				oPNumber = oMember.m_oPNumber
+				
+				oInfo_Member = f"{oName},{oPNumber}"
+				
+				oWStream.write(oInfo_Member)
+				oWStream.write("\n")
+	
+	# 회원을 로드한다
+	def deserializeMembers_FromFile(self, a_oPath_File):
+		# 로드가 불가능 할 경우
+		if not os.path.exists(a_oPath_File):
+			return
+		
+		with open(a_oPath_File, "rb") as oRStream:
+			self.m_oListMembers = pickle.load(oRStream)
+	
+	# 회원을 저장한다
+	def serializeMembers_ToFile(self, a_oPath_File):
+		oPath_Dir = os.path.dirname(a_oPath_File)
+		
+		# 디렉토리 생성이 필요 할 경우
+		if oPath_Dir:
+			os.makedirs(oPath_Dir, exist_ok = True)
+	
+		with open(a_oPath_File, "wb") as oWStream:
+			pickle.dump(self.m_oListMembers, oWStream)
+			
