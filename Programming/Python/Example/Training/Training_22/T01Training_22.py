@@ -6,6 +6,7 @@ from Training.Training_19.CException_Missing import CException_Missing
 
 from Training.Training_22.CT01Table_Member import CTable_Member
 
+
 # Training 22
 def start(args):
 	MENU_ADD_MEMBER = 1
@@ -47,6 +48,9 @@ def start(args):
 		
 		print()
 	
+	oTable.m_oCursor.close()
+	oTable.m_oConnection.commit()
+	
 	print("프로그램을 종료합니다.")
 
 
@@ -65,10 +69,10 @@ def addMember(a_oTable):
 	oName = input("이름 입력 : ")
 	oPNumber = input("전화 번호 입력 : ")
 	
-	nResult = a_oTable.findMember(oName)
+	oMember = a_oTable.getMember(oName)
 	
-	# 회원이 존재 할 경우
-	if nResult >= 0:
+	# 회원 정보가 존재 할 경우
+	if oMember != None:
 		raise CException_Duplicate(oName)
 	
 	a_oTable.addMember(oName, oPNumber)
@@ -78,29 +82,39 @@ def addMember(a_oTable):
 # 회원을 제거한다
 def removeMember(a_oTable):
 	oName = input("이름 입력 : ")
-	nResult = a_oTable.findMember(oName)
+	oMember = a_oTable.getMember(oName)
 	
 	# 회원이 없을 경우
-	if nResult < 0:
+	if oMember == None:
 		raise CException_Missing(oName)
 	
 	a_oTable.removeMember(oName)
 	print(f"{oName} 을(를) 제거했습니다.")
+	
 
 # 회원을 검색한다
 def searchMember(a_oTable):
 	oName = input("이름 입력 : ")
-	nResult = a_oTable.findMember(oName)
+	oMember = a_oTable.getMember(oName)
 	
 	# 회원이 없을 경우
-	if nResult < 0:
+	if oMember == None:
 		raise CException_Missing(oName)
 	
 	print("=====> 회원 정보 <=====")
-	a_oTable.searchMember(oName)
-
+	print(f"이름 : {oMember[0]}")
+	print(f"전화 번호 : {oMember[1]}")
+	
 
 # 모든 회원을 출력한다
 def printMembers_All(a_oTable):
+	oListMembers = a_oTable.getMembers_All()
 	print("=====> 모든 회원 정보 <=====")
-	a_oTable.showMembers_All()
+	
+	for oMember in oListMembers:
+		oName = oMember[0]
+		oPNumber = oMember[1]
+		
+		print(f"이름 : {oName}")
+		print(f"전화 번호 : {oPNumber}\n")
+		
