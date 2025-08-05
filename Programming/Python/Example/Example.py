@@ -50,6 +50,8 @@ from Example.Example_24 import E01Example_24
 from Example.Example_25 import E01Example_25
 from Example.Example_26 import E01Example_26
 from Example.Example_27 import E01Example_27
+from Example.Example_28 import E01Example_28
+from Example.Example_29 import E01Example_29
 
 from Practice.Practice_01 import P01Practice_01
 from Practice.Practice_02 import P01Practice_02
@@ -134,6 +136,8 @@ if __name__ == "__main__":
 	# E01Example_25.start(sys.argv)
 	# E01Example_26.start(sys.argv)
 	# E01Example_27.start(sys.argv)
+	# E01Example_28.start(sys.argv)
+	# E01Example_29.start(sys.argv)
 	
 	# P01Practice_01.start(sys.argv)
 	# P01Practice_02.start(sys.argv)
