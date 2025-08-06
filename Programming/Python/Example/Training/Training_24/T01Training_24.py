@@ -20,4 +20,4 @@ def start(args):
 
 # 이메일 유효 여부를 검사한다
 def isValid_Email(a_oEmail):
-	return bool(re.match(r"^([\d\w.]+)@[a-z]+\.([a-z]+)$", a_oEmail))
+	return bool(re.match(r"^([\w.]+)@[a-z]+\.([a-z]+)$", a_oEmail))
