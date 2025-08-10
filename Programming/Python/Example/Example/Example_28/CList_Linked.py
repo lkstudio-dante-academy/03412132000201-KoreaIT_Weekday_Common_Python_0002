@@ -45,8 +45,7 @@ class CList_Linked:
 	def removeVal(self, a_tVal):
 		oNode_Prev = self.m_oNode_Head
 		
-		while oNode_Prev.m_oNode_Next != None and \
-				oNode_Prev.m_oNode_Next.m_tVal != a_tVal:
+		while oNode_Prev.m_oNode_Next != None and oNode_Prev.m_oNode_Next.m_tVal != a_tVal:
 			oNode_Prev = oNode_Prev.m_oNode_Next
 		
 		oNode_Remove = oNode_Prev.m_oNode_Next
